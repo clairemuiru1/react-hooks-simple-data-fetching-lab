@@ -6,8 +6,8 @@ function App() {
     useEffect(() => {
         async function fetchDogImage() {
             const response = await fetch('https://dog.ceo/api/breeds/image/random')
-            const data = await response.json()
-            setDogImage(data.message)
+            const dogImage= await response.json()
+            setDogImage(dogImage)
         }
         fetchDogImage()
     },[])
